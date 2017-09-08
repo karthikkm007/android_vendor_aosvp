@@ -16,10 +16,10 @@
 # -----------------------------------------------------------------
 # Lineage OTA update package
 
-LINEAGE_TARGET_PACKAGE := $(PRODUCT_OUT)/lineage-$(LINEAGE_VERSION).zip
+AOSVP_TARGET_PACKAGE := $(PRODUCT_OUT)/$(AOSVP_VERSION).zip
 
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(LINEAGE_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(LINEAGE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(LINEAGE_TARGET_PACKAGE).md5sum
-	@echo "Package Complete: $(LINEAGE_TARGET_PACKAGE)" >&2
+	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(AOSVP_TARGET_PACKAGE)
+	$(hide) $(MD5SUM) $(AOSVP_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(AOSVP_TARGET_PACKAGE).md5sum
+	@echo "Package Complete: $(AOSVP_TARGET_PACKAGE)" >&2

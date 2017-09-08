@@ -1,4 +1,4 @@
-for combo in $(curl -s https://raw.githubusercontent.com/LineageOS/hudson/master/lineage-build-targets | sed -e 's/#.*$//' | grep lineage-15.0 | awk '{printf "lineage_%s-%s\n", $1, $2}')
+for device in $(curl -s https://raw.githubusercontent.com/ViperOS-Devices/devices/master/devices.json | sed 's/ //; /^$/d' | grep -Po '\"codename\":".*?"' | sed -e 's/codename//;s/\"//g;s/\://')
 do
-    add_lunch_combo $combo
+add_lunch_combo viper_$device-userdebug
 done
