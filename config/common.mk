@@ -234,6 +234,9 @@ endif
 
 DEVICE_PACKAGE_OVERLAYS += vendor/aosvp/overlay/common
 
+# Enable Google Assistant
+PRODUCT_PROPERTY_OVERRIDES += ro.opa.eligible_device=true
+
 # Versioning System
 # AOSVP version.
 AOSVP_VERSION_NUMBER := V4.0
