@@ -126,6 +126,11 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     librsjni
 
+# AOSVP Prebuilt Packages
+PRODUCT_PACKAGES += \
+    PixelLauncher \
+    GDeskClock \
+
 # Custom Lineage packages
 PRODUCT_PACKAGES += \
     AudioFX \
